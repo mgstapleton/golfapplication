@@ -1,0 +1,24 @@
+/**
+* @author Michael Stapleton
+**/
+clubList = [{
+    club:'Abbeyleix',
+    location: {lat: 52.9131, lon: -7.3485},
+    },
+  {
+    club:'Achill',
+    location: {lat: 53.393208, lon: -6.367567},
+    },
+  {
+    club:'Adare',
+    location: {lat: 53.358903, lon: -6.427435},
+    },
+  {
+    club:'Adare Manor',
+    location: {lat: 53.358903, lon: -6.427435},
+    },
+  {
+    club:'Antrim',
+    location: {lat: 54.71363, lon: -6.21428},
+    }
+]
