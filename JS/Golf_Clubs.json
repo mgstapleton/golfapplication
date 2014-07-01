@@ -294,8 +294,8 @@ clubList = [{
     location: {lat: 52.3625, lon: -7.932809},
     },
   {
-    club:'Cairn',
-    location: {lat: 0, lon: 0},
+    club:'Carne',
+    location: {lat: 54.223960, lon: -10.033801},
     },
   {
     club:'Callan',
@@ -339,11 +339,11 @@ clubList = [{
     },
   {
     club:'Castle Dargan',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.197426, lon: -8.436339},
     },
   {
     club:'Castle Hume',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.392221, lon: -7.690015},
     },
   {
     club:'Castlebar',
@@ -399,7 +399,7 @@ clubList = [{
     },
   {
     club:'Ceann Sibeal',
-    location: {lat: 0, lon: 0},
+    location: {lat: 52.180320, lon: -10.442719},
     },
   {
     club:'Celbridge Elmhall',
@@ -407,7 +407,7 @@ clubList = [{
     },
   {
     club:'Charlesland',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.132565, lon: -6.056032},
     },
   {
     club:'Charleville',
@@ -427,11 +427,11 @@ clubList = [{
     },
   {
     club:'Citywest Resort',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.286165, lon: -6.450133},
     },
   {
     club:'Clandeboye',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.627141, lon: -5.684029},
     },
   {
     club:'Clane',
@@ -443,11 +443,11 @@ clubList = [{
     },
   {
     club:'Cliftonville',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.627125, lon: -5.955082},
     },
   {
     club:'Clogher Valley',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.368633, lon: -7.336582},
     },
   {
     club:'Clones',
@@ -463,7 +463,7 @@ clubList = [{
     },
   {
     club:'Cloughaneely',
-    location: {lat: 0, lon: 0},
+    location: {lat: 55.137729, lon: -8.104538},
     },
   {
     club:'Cloverhill',
@@ -471,7 +471,7 @@ clubList = [{
     },
   {
     club:'County Armagh',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.345245, lon: -6.648077},
     },
   {
     club:'County Cavan',
@@ -503,23 +503,23 @@ clubList = [{
     },
   {
     club:'Colin Valley',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.572384, lon: -6.009340},
     },
   {
     club:'Connemara',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.421070, lon: -10.144070},
     },
   {
     club:'Connemara Isles',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.316897, lon: -9.610344},
     },
   {
     club:'Coollattin',
-    location: {lat: 0, lon: 0},
+    location: {lat: 52.753832, lon: -6.499718},
     },
   {
     club:'Corballis Links',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.471526, lon: -6.126391},
     },
   {
     club:'Cork',
@@ -527,7 +527,7 @@ clubList = [{
     },
   {
     club:'Corrstown',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.459602, lon: -6.323136},
     },
   {
     club:'Courtown',
@@ -539,7 +539,7 @@ clubList = [{
     },
   {
     club:'Cregmore Park',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.326863, lon: -8.869482},
     },
   {
     club:'Crossgar',
@@ -547,7 +547,7 @@ clubList = [{
     },
   {
     club:'Crover House',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.826116, lon: -7.294696},
     },
   {
     club:'Cruit Island',
@@ -555,7 +555,7 @@ clubList = [{
     },
   {
     club:'Curra West',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.116388, lon: -8.439463},
     },
   {
     club:'Cushendall',
@@ -571,11 +571,11 @@ clubList = [{
     },
   {
     club:'Delvin Castle',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.614170, lon: -7.099937},
     },
   {
     club:'Djouce',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.102992, lon: -6.191065},
     },
   {
     club:'Donabate',
@@ -607,15 +607,15 @@ clubList = [{
     },
   {
     club:'Down Royal',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.491630, lon: -6.128136},
     },
   {
     club:'Downpatrick',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.334705, lon: -5.699688},
     },
   {
     club:'Dromoland',
-    location: {lat: 0, lon: 0},
+    location: {lat: 52.782027, lon: -8.916530},
     },
   {
     club:'Druids Glen',
@@ -667,7 +667,7 @@ clubList = [{
     },
   {
     club:'Dunmurry Springs',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.188923, lon: -6.933467},
     },
   {
     club:'East Clare',
@@ -711,7 +711,7 @@ clubList = [{
     },
   {
     club:'Enniskillen',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.338079, lon: -7.614984},
     },
   {
     club:'Esker Hills',
@@ -723,7 +723,7 @@ clubList = [{
     },
   {
     club:'Faithlegg',
-    location: {lat: 0, lon: 0},
+    location: {lat: 52.258108, lon: -7.024243},
     },
   {
     club:'Farnham Estate',
@@ -731,7 +731,7 @@ clubList = [{
     },
   {
     club:'Faughan Valley',
-    location: {lat: 0, lon: 0},
+    location: {lat: 55.020199, lon: -7.252231},
     },
   {
     club:'Fermoy',
