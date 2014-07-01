@@ -4,7 +4,7 @@
 // 
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-	alert("loaded index.js");
+	//alert("loaded index.js");
     	console.log("deviceReady");
     	bounds = new google.maps.LatLngBounds();
     	
