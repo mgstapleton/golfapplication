@@ -171,7 +171,7 @@ var showAllClubs = function(){
 	    // Allow each marker to have an info window    
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
-                infoWindow.setContent("Hello! : " + i);
+                infoWindow.setContent(club1.club + " Golf Club");
                 infoWindow.open(mapAll, marker);
               };
             })(marker, i));
