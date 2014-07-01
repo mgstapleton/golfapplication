@@ -58,7 +58,7 @@ function onDeviceReady() {
 		// google.maps.event.trigger(map, 'resize');
 		// });
 };
- 
+};
 // Populate index page list with golf club locations
 var addClub = function () {
    console.log("addclub triggered (from body onload)");
