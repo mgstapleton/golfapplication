@@ -2,9 +2,9 @@
  * @author Michael Stapleton
  */
 // 
-document.addEventListener("deviceready", onDeviceReady, false);
+//document.addEventListener("deviceready", onDeviceReady, false);
 
-function onDeviceReady() {
+//function onDeviceReady() {
     	console.log("deviceReady");
     	var bounds = new google.maps.LatLngBounds();
 
@@ -34,7 +34,7 @@ function onDeviceReady() {
 		google.maps.event.trigger(mapAll, 'resize');
 		mapAll.setOptions(myOptions);
 	});
-});
+//});
 	// $(document).on("pagecreate","#map_page",function(event){
 		// console.log("pagecreate triggered fror #map_page1");
 		// var clubs = clubList[locator.getLocation()];
@@ -58,7 +58,7 @@ function onDeviceReady() {
 		// google.maps.event.trigger(map, 'resize');
 		// });
 //};
-};
+//};
 // Populate index page list with golf club locations
 var addClub = function () {
    console.log("addclub triggered (from body onload)");
