@@ -8,7 +8,7 @@ function onDeviceReady() {
     	console.log("deviceReady");
     	var bounds = new google.maps.LatLngBounds();
 
-	if (typeof jQuery !== "undefined") {
+	//if (typeof jQuery !== "undefined") {
 	console.log("jQuery binding initialization called");
 	// Initialization that runs when each page loads for the first time
 	
@@ -57,7 +57,7 @@ function onDeviceReady() {
 		// console.log("resize triggered fror #map_page");
 		// google.maps.event.trigger(map, 'resize');
 		// });
-};
+//};
 };
 // Populate index page list with golf club locations
 var addClub = function () {
