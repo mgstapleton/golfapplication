@@ -2,13 +2,13 @@
  * @author Michael Stapleton
  */
 // 
-//document.addEventListener("deviceready", onDeviceReady, false);
-alert("loaded index.js");
-//function onDeviceReady() {
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+	alert("loaded index.js");
     	console.log("deviceReady");
-    	var bounds = new google.maps.LatLngBounds();
+    	bounds = new google.maps.LatLngBounds();
 
-	//if (typeof jQuery !== "undefined") {
+	if (typeof jQuery !== "undefined") {
 	console.log("jQuery binding initialization called");
 	// Initialization that runs when each page loads for the first time
 	
@@ -34,7 +34,7 @@ alert("loaded index.js");
 		google.maps.event.trigger(mapAll, 'resize');
 		mapAll.setOptions(myOptions);
 	});
-//});
+});
 	// $(document).on("pagecreate","#map_page",function(event){
 		// console.log("pagecreate triggered fror #map_page1");
 		// var clubs = clubList[locator.getLocation()];
@@ -57,8 +57,8 @@ alert("loaded index.js");
 		// console.log("resize triggered fror #map_page");
 		// google.maps.event.trigger(map, 'resize');
 		// });
-//};
-//};
+};
+};
 // Populate index page list with golf club locations
 var addClub = function () {
    console.log("addclub triggered (from body onload)");
@@ -95,7 +95,7 @@ var addClub = function () {
 var locationClicked = function (locat) {
 	(locat !== "") ? locator.setLocation(locat) : locator.setLocation("blank"); 
 };
-}
+
 // Populate club details
 var loadData = function () {
 	console.log("loadData triggered (from doc)");
