@@ -3,7 +3,7 @@
  */
 // 
 //document.addEventListener("deviceready", onDeviceReady, false);
-
+alert("loaded index.js");
 //function onDeviceReady() {
     	console.log("deviceReady");
     	var bounds = new google.maps.LatLngBounds();
