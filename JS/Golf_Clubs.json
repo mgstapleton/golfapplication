@@ -1364,5 +1364,293 @@ clubList = [{
   {
     club:'Roundwood',
     location: {lat: 53.066667, lon: -6.233333},
+    },
+  {
+    club:'Royal Belfast',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'Royal County Down',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'Royal Curragh',
+    location: {lat: 53.377547, lon: -6.371807},
+    },
+  {
+    club:'Royal Portrush',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'Royal Tara',
+    location: {lat: 53.591374, lon: -6.635128},
+    },
+  {
+    club:'Rush',
+    location: {lat: 53.376216, lon: -6.425791},
+    },
+  {
+    club:'Scarke',
+    location: {lat: 52.41431, lon: -6.88531},
+    },
+  {
+    club:'Scrabo',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'Seafield',
+    location: {lat: 51.699584, lon: -9.442349},
+    },
+  {
+    club:'Seapoint',
+    location: {lat: 53.58421, lon: -7.19811},
+    },
+  {
+    club:'Shandon Park',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'Shannon',
+    location: {lat: 51.650596, lon: -8.856465},
+    },
+  {
+    club:'Silloge Park',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'Silverwood',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'Skellig Bay',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'Skerries',
+    location: {lat: 53.595738, lon: -6.183302},
+    },
+  {
+    club:'Skibbereen',
+    location: {lat: 51.548611, lon: -9.266111},
+    },
+  {
+    club:'Slade Valley',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'Slieve Russell',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'Slievenamon',
+    location: {lat: 52.426186, lon: -7.703728},
+    },
+  {
+    club:'Smurfit',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'South Meath',
+    location: {lat: 53.376216, lon: -6.425791},
+    },
+  {
+    club:'Spa',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'Spanish Point',
+    location: {lat: 52.845, lon: -9.437},
+    },
+  {
+    club:'St Annes',
+    location: {lat: 53.3623, lon: -6.403359},
+    },
+  {
+    club:'St Helens Bay',
+    location: {lat: 52.232575, lon: -6.325148},
+    },
+  {
+    club:'St Margarets',
+    location: {lat: 53.431093, lon: -6.298262},
+    },
+  {
+    club:'Stackstown',
+    location: {lat: 53.28158, lon: -6.281107},
+    },
+  {
+    club:'Strabane',
+    location: {lat: 54.827269, lon: -7.463579},
+    },
+  {
+    club:'Strandhill',
+    location: {lat: 54.26999, lon: -8.59894},
+    },
+  {
+    club:'Strokestown',
+    location: {lat: 53.775867, lon: -8.103532},
+    },
+  {
+    club:'Summerhill',
+    location: {lat: 53.481366, lon: -6.732515},
+    },
+  {
+    club:'Sutton',
+    location: {lat: 53.395732, lon: -6.114463},
+    },
+  {
+    club:'Swinford',
+    location: {lat: 53.943702, lon: -8.950006},
+    },
+  {
+    club:'Swords',
+    location: {lat: 53.440256, lon: -6.249614},
+    },
+  {
+    club:'Tandragee',
+    location: {lat: 54.348643, lon: -6.4158},
+    },
+  {
+    club:'Tara Glen',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'Temple',
+    location: {lat: 53.372483, lon: -6.222066},
+    },
+  {
+    club:'Templemore',
+    location: {lat: 52.796667, lon: -7.834444},
+    },
+  {
+    club:'The Heath',
+    location: {lat: 53.385795, lon: -6.408909},
+    },
+  {
+    club:'The Heritage',
+    location: {lat: 52.615746, lon: -8.573229},
+    },
+  {
+    club:'The Island',
+    location: {lat: 53.176792, lon: -6.095417},
+    },
+  {
+    club:'The Links Portmarnock',
+    location: {lat: 53.411354, lon: -6.126082},
+    },
+  {
+    club:'The Royal Dublin',
+    location: {lat: 53.35648, lon: -6.170359},
+    },
+  {
+    club:'Thurles',
+    location: {lat: 52.680106, lon: -7.804442},
+    },
+  {
+    club:'Tipperary',
+    location: {lat: 52.470167, lon: -8.161795},
+    },
+  {
+    club:'Townley Hall',
+    location: {lat: 53.73386, lon: -6.45335},
+    },
+  {
+    club:'Traad Ponds',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'Tralee',
+    location: {lat: 52.27131, lon: -9.699932},
+    },
+  {
+    club:'Tramore',
+    location: {lat: 52.157611, lon: -7.169468},
+    },
+  {
+    club:'Tuam',
+    location: {lat: 53.514722, lon: -8.851389},
+    },
+  {
+    club:'Tubbercurry',
+    location: {lat: 54.055226, lon: -8.729824},
+    },
+  {
+    club:'Tulfarris',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'Tullamore',
+    location: {lat: 53.275526, lon: -7.493385},
+    },
+  {
+    club:'Tullybeg House',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'Virginia',
+    location: {lat: 53.832753, lon: -7.091628},
+    },
+  {
+    club:'Warrenpoint',
+    location: {lat: 54.099, lon: -6.249},
+    },
+  {
+    club:'Waterford',
+    location: {lat: 52.256667, lon: -7.129167},
+    },
+  {
+    club:'Waterford Castle',
+    location: {lat: 52.256667, lon: -7.129167},
+    },
+  {
+    club:'Waterville',
+    location: {lat: 53.393639, lon: -6.372728},
+    },
+  {
+    club:'West Waterford',
+    location: {lat: 52.256667, lon: -7.129167},
+    },
+  {
+    club:'Westmanstown',
+    location: {lat: 53.377688, lon: -6.450623},
+    },
+  {
+    club:'Westport',
+    location: {lat: 53.811330,  lon: -9.563770},
+    },
+  {
+    club:'Wexford',
+    location: {lat: 52.403519, lon: -6.973029},
+    },
+  {
+    club:'Whitehead',
+    location: {lat: 0, lon: 0},
+    },
+  {
+    club:'Wicklow',
+    location: {lat: 53.176792, lon: -6.095417},
+    },
+  {
+    club:'Williamstown',
+    location: {lat: 52.574021, lon: -8.573961},
+    },
+  {
+    club:'Woodbrook',
+    location: {lat: 53.215923, lon: -6.119422},
+    },
+  {
+    club:'Woodenbridge',
+    location: {lat: 52.83465, lon: -6.24559},
+    },
+  {
+    club:'Woodlands',
+    location: {lat: 53.37386, lon: -6.431318},
+    },
+  {
+    club:'Woodstock',
+    location: {lat: 52.841197, lon: -9.028616},
+    },
+  {
+    club:'Youghal',
+    location: {lat: 51.95427, lon: -7.847171},
     }
 ]
