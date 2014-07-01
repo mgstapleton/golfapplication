@@ -7,6 +7,10 @@ function onDeviceReady() {
 	alert("loaded index.js");
     	console.log("deviceReady");
     	bounds = new google.maps.LatLngBounds();
+    	
+    	if (typeof jQuery === "undefined") {
+    	   alert("Jquery not present");
+    	}
 
 	if (typeof jQuery !== "undefined") {
 	console.log("jQuery binding initialization called");
