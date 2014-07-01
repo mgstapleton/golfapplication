@@ -56,6 +56,10 @@ if (typeof jQuery !== "undefined") {
 		// console.log("resize triggered fror #map_page");
 		// google.maps.event.trigger(map, 'resize');
 		// });
+}else
+{
+	
+console.log("jQuery error triggered at body onload)");
 };
  
 // Populate index page list with golf club locations
