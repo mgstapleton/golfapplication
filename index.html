@@ -54,6 +54,31 @@
 			    </div>
 			    <div data-role="collapsible">
 					<h4>Open Competitions</h4>
+					<form method="post" action="demoform.asp">
+					<div class="ui-field-contain">
+					<fieldset class="ui-field-contain">
+					    <label for="province">Select Province</label>
+					    <select name="province" id="province">
+					      <option value="Leinster">Leinster</option>
+					      <option value="Munster">Munster</option>
+					      <option value="Connacht">Connacht</option>
+					      <option value="Ulster">Ulster</option>
+					    </select>
+					  </fieldset>
+					  <fieldset class="ui-field-contain">
+					    <label for="comptype">Select Competition Type</label>
+					    <select name="comptype" id="comptype">
+					      <option value="Singles">Singles</option>
+					      <option value="Team">Team Event</option>
+					      <option value="Scratch Cup">Scratch Cup</option>
+					    </select>
+					  </fieldset>
+  						<label for="switch">Flip toggle switch checkbox:</label>
+    						<input type="checkbox" data-role="flipswitch" name="switch" id="switch">
+    						<input type="reset" value="Reset Button">
+						<input type="submit" value="Submit Button">
+					</div>
+					</form>
 				</div>
 			</nav>
 			<footer data-role="footer">
