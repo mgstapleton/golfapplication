@@ -161,7 +161,7 @@ var showAllClubs = function(){
 		locator.setLocation(i);
 		var club1 = clubList[locator.getLocation()];
 		var position = new google.maps.LatLng(club1.location.lat, club1.location.lon);
-        console.log(position);
+        //console.log(position);
         bounds.extend(position);
         marker = new google.maps.Marker({
             position: position,
