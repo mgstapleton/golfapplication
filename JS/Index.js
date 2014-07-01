@@ -155,6 +155,9 @@ var showAllClubs = function(){
 	
 	// Display multiple markers on a map
     var infoWindow = new google.maps.InfoWindow(), marker, i;
+    if (typeof jQuery === "undefined") {
+		console.log('jQuery Mobile not defined.');
+    }
     
 	for (i=1; i<=clubList.length;i++){
 		locator.setLocation(i);
