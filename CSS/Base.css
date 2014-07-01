@@ -4,13 +4,14 @@ body {
 }
 
 header, footer {
-	background-color: black;
-	color: #ABCDEF;
-	margin: 10px;
-	padding: 10px;
-	border: 2px solid navy;
-	border-radius: 10px;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, lightblue), color-stop(10%, midnightblue), color-stop(100%, black));
+	position: fixed;
+	/*background-color: black;*/
+	/*color: #ABCDEF;*/
+	/*margin: 10px;*/
+	/*padding: 10px;*/
+	/*border: 2px solid navy;*/
+	/*border-radius: 10px;*/
+	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, lightblue), color-stop(10%, midnightblue), color-stop(100%, black));*/
 }
 
 header {
@@ -42,7 +43,7 @@ img {
 
 /* For a narrower view */
 @media screen and (max-device-width: 320px) {
-body{
-	font-size: 250%;
-	}
+/*body{*/
+/*	font-size: 250%;*/
+/*	}*/
 }
