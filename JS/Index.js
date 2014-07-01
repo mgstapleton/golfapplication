@@ -2,15 +2,16 @@
  * @author Michael Stapleton
  */
 // 
+document.addEventListener("deviceready", onDeviceReady, false);
 
-function deviceReady() {
-    console.log("deviceReady");
-    var bounds = new google.maps.LatLngBounds();
-}
+function onDeviceReady() {
+    	console.log("deviceReady");
+    	var bounds = new google.maps.LatLngBounds();
 
-if (typeof jQuery !== "undefined") {
+	if (typeof jQuery !== "undefined") {
 	console.log("jQuery binding initialization called");
 	// Initialization that runs when each page loads for the first time
+	
 	$(document).on("pageshow","#home_page",function(event){
 		// Do stuff now that the DOM is ready
 		console.log("home pageshow triggered from document");
@@ -56,9 +57,9 @@ if (typeof jQuery !== "undefined") {
 		// console.log("resize triggered fror #map_page");
 		// google.maps.event.trigger(map, 'resize');
 		// });
-}else
+}
+else
 {
-	
 console.log("jQuery error triggered at body onload)");
 };
  
@@ -98,7 +99,7 @@ var addClub = function () {
 var locationClicked = function (locat) {
 	(locat !== "") ? locator.setLocation(locat) : locator.setLocation("blank"); 
 };
-
+}
 // Populate club details
 var loadData = function () {
 	console.log("loadData triggered (from doc)");
