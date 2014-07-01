@@ -1027,7 +1027,7 @@ clubList = [{
     },
   {
     club:'Lisheen Springs',
-    location: {lat: 53.228871, lon -6.450429},
+    location: {lat: 53.228871, lon: -6.450429},
     },
   {
     club:'Lismore',
