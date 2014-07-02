@@ -243,17 +243,18 @@ function insertIntoDB() {
        tx.executeSql('DROP TABLE IF EXISTS open_comps');
        tx.executeSql('CREATE TABLE IF NOT EXISTS open_comps (club , format, fixture, holes, start_date, cost, info)');
        console.log("table created");
-       var recursiveFunction = function(index) {
-        if (index < resultJSON.length) {
+       //var recursiveFunction = function(index) {
+        $.each(fixtures, function(i, comp) {
             tx.executeSql('INSERT INTO open_comps (club , format, fixture, holes, start_date, cost, info) VALUES (?, ?, ?, ?, ?, ?, ?)',
-               [resultJSON[index].club,resultJSON[index].format,resultJSON[index].fixtures,resultJSON[index].holes,resultJSON[index].start_date,resultJSON[index].cost,resultJSON[index].info], function (){index++; recursiveFunction(index)}, errorCB);
+               [comp.fixtures.club,comp.fixtures.format,comp.fixtures.fixtures,comp.fixtures.holes,comp.fixtures.start_date,comp.fixtures.cost,comp.fixtures.info]);
+               //function (){index++; recursiveFunction(index)}, errorCB);
          }
-      }
-      recursiveFunction(0);
+     // }
+     // recursiveFunction(0);
     });
 };
 
-   function errorCB(err) {
+function errorCB(err) {
     console.log("Error processing SQL: "+err.code+":"+err.message);
 };
 
