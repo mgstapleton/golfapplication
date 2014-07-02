@@ -246,7 +246,7 @@ function insertIntoDB() {
        //var recursiveFunction = function(index) {
         $.each(fixtures, function(i, comp) {
             tx.executeSql('INSERT INTO open_comps (club , format, fixture, holes, start_date, cost, info) VALUES (?, ?, ?, ?, ?, ?, ?)',
-               [comp.fixtures.club,comp.fixtures.format,comp.fixtures.fixtures,comp.fixtures.holes,comp.fixtures.start_date,comp.fixtures.cost,comp.fixtures.info]);
+               [comp.club,comp.format,comp.fixture,comp.holes,comp.start_date,comp.cost,comp.info]);
                //function (){index++; recursiveFunction(index)}, errorCB);
          }
      // }
