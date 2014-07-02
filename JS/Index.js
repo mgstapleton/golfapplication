@@ -69,8 +69,9 @@ function onDeviceReady() {
 		// console.log("resize triggered fror #map_page");
 		// google.maps.event.trigger(map, 'resize');
 		// });
+	};
 };
-};
+
 document.addEventListener("deviceready", onDeviceReady, false);
 // Populate index page list with golf club locations
 var addClub = function () {
@@ -102,7 +103,7 @@ var addClub = function () {
 		$("#clubs").listview('refresh');
 		$("#clubs").trigger('create'); // TODO: Needed?
 		}
-	};
+};
 
 // Save index of selected location
 var locationClicked = function (locat) {
@@ -233,7 +234,7 @@ var locator = (function () {
         getLocation: getLoc
    };
 
-}
+}());
  
 function insertIntoDB() {
        db.transaction(function (tx){
@@ -247,14 +248,9 @@ function insertIntoDB() {
       }
       recursiveFunction(0);
     });
-   }
+};
 
    function errorCB(err) {
     console.log("Error processing SQL: "+err.code+":"+err.message);
-   }
+};
 
-   function onDeviceReady() {
-     
-    }
-
-());
