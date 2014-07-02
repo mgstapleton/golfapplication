@@ -2,13 +2,13 @@
  * @author Michael Stapleton
  */
 // 
-document.addEventListener("deviceready", onDeviceReady, false);
+
 function onDeviceReady() {
 	var db = null;
    	var resultJSON;
 	db = window.openDatabase("golfapp_db", "1.0", "golfapp", 1000000);
      	//var base_url = "https://www.hoomz.nl/staging/index.php/api/";
-     	$.getJSON(julyfixtures.json, function(result) {
+     	$.getJSON("julyfixtures.json", function(result) {
 	resultJSON = result;        
       	insertIntoDB();
      });
@@ -71,6 +71,7 @@ function onDeviceReady() {
 		// });
 };
 };
+document.addEventListener("deviceready", onDeviceReady, false);
 // Populate index page list with golf club locations
 var addClub = function () {
    console.log("addclub triggered (from body onload)");
