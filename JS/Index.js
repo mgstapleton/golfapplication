@@ -9,8 +9,8 @@ function onDeviceReady() {
 	db = window.openDatabase("golfapp_db", "1.0", "golfapp", 1000000);
 	console.log("Database created");
      	//var base_url = "https://www.hoomz.nl/staging/index.php/api/";
-     	$.getJSON("julyfixtures.json", function(result) {
-	resultJSON = result;        
+     	//$.getJSON("julyfixtures.json", function(result) {
+	//resultJSON = result;        
       	insertIntoDB();
      });
 	//alert("loaded index.js");
@@ -242,7 +242,7 @@ function insertIntoDB() {
        	console.log("connected to db");
        tx.executeSql('DROP TABLE IF EXISTS open_comps');
        tx.executeSql('CREATE TABLE IF NOT EXISTS open_comps (club , format, fixture, holes, start_date, cost, info)');
-       console.log("table created");
+       	console.log("table created");
        //var recursiveFunction = function(index) {
         $.each(fixtures, function(i, comp) {
             tx.executeSql('INSERT INTO open_comps (club , format, fixture, holes, start_date, cost, info) VALUES (?, ?, ?, ?, ?, ?, ?)',
