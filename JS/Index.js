@@ -4,6 +4,14 @@
 // 
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
+	var db = null;
+   	var resultJSON;
+	db = window.openDatabase("golfapp_db", "1.0", "golfapp", 1000000);
+     	//var base_url = "https://www.hoomz.nl/staging/index.php/api/";
+     	$.getJSON(julyfixtures.json, function(result) {
+	resultJSON = result;        
+      	insertIntoDB();
+     });
 	//alert("loaded index.js");
     	console.log("deviceReady");
     	bounds = new google.maps.LatLngBounds();
@@ -224,4 +232,28 @@ var locator = (function () {
         getLocation: getLoc
    };
 
-}());
+}
+ 
+function insertIntoDB() {
+       db.transaction(function (tx){
+       tx.executeSql('DROP TABLE IF EXISTS open_comps');
+       tx.executeSql('CREATE TABLE IF NOT EXISTS open_comps (club , format, fixture, holes, start_date, cost, info)');
+       var recursiveFunction = function(index) {
+        if (index < resultJSON.length) {
+            tx.executeSql('INSERT INTO Profiles (club , format, fixture, holes, start_date, cost, info) VALUES (?, ?, ?, ?, ?, ?, ?)',
+               [resultJSON[index].club,resultJSON[index].format,resultJSON[index].fixtures,resultJSON[index].holes,resultJSON[index].start_date,resultJSON[index].cost,resultJSON[index].info], function (){index++; recursiveFunction(index)}, errorCB);
+         }
+      }
+      recursiveFunction(0);
+    });
+   }
+
+   function errorCB(err) {
+    console.log("Error processing SQL: "+err.code+":"+err.message);
+   }
+
+   function onDeviceReady() {
+     
+    }
+
+());
