@@ -2,16 +2,16 @@
  * @author Michael Stapleton
  */
 //
-function init() {
+var init = function {
 	alert("loaded index.js");
 	onDeviceReady();
 	addClub();
 }
 
-function onDeviceReady() {
+var onDeviceReady = function() {
 
-	console.log("deviceReady");
-	bounds = new google.maps.LatLngBounds();
+	console.log("deviceReady")
+	bounds = new google.maps.LatLngBounds()
 
 	if (typeof jQuery === "undefined") {
 		alert("Jquery not present");
@@ -68,9 +68,9 @@ function onDeviceReady() {
 		// });
 	};
 	createDb();
-};
+}
 
-var function createDb() {
+var createDb = function () {
 	var db = null;
 	//var resultJSON;
 	db = window.openDatabase("golfapp_db", "1.0", "golfapp", 1000000);
@@ -80,7 +80,7 @@ var function createDb() {
 	//resultJSON = result;
 	insertIntoDB();
 	// });
-};
+}
 
 // Populate index page list with golf club locations
 var addClub = function () {
@@ -211,15 +211,15 @@ var showAllClubs = function () {
 }
 //};
 
-var infoWindowContent = [
-	['<div class="info_content">' +
-		'<h3>Golf Club</h3>' +
-		'<p>Text here</p>' + '</div>'],
-	['<div class="info_content">' +
-		'<h3>Palace of Westminster</h3>' +
-		'<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
-		'</div>']
-];
+// var infoWindowContent = [
+// 	['<div class="info_content">' +
+// 		'<h3>Golf Club</h3>' +
+// 		'<p>Text here</p>' + '</div>'],
+// 	['<div class="info_content">' +
+// 		'<h3>Palace of Westminster</h3>' +
+// 		'<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
+// 		'</div>']
+// ];
 
 // These functions are exposed as a module named "locator"
 var locator = (function () {
@@ -249,7 +249,7 @@ var locator = (function () {
 }
 	());
 
-function insertIntoDB() {
+var insertIntoDB = function () {
 	db.transaction(function (tx) {
 		tx.executeSql('DROP TABLE IF EXISTS open_comps');
 		tx.executeSql('CREATE TABLE IF NOT EXISTS open_comps (club , format, fixture, holes, start_date, cost, info)');
@@ -269,4 +269,4 @@ function insertIntoDB() {
 		console.log("Error processing SQL: " + err.code + ":" + err.message);
 	};
 
-	//document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReady, false);
