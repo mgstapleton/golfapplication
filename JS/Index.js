@@ -2,13 +2,13 @@
  * @author Michael Stapleton
  */
 //
-var init = function {
+function init () {
 	alert("loaded index.js");
 	onDeviceReady();
 	addClub();
 }
 
-var onDeviceReady = function() {
+function onDeviceReady () {
 
 	console.log("deviceReady")
 	bounds = new google.maps.LatLngBounds()
@@ -70,7 +70,7 @@ var onDeviceReady = function() {
 	createDb();
 }
 
-var createDb = function () {
+function createDb () {
 	var db = null;
 	//var resultJSON;
 	db = window.openDatabase("golfapp_db", "1.0", "golfapp", 1000000);
@@ -83,7 +83,7 @@ var createDb = function () {
 }
 
 // Populate index page list with golf club locations
-var addClub = function () {
+function addClub () {
 	console.log("addclub triggered (from body onload)");
 	var inx,
 	node;
