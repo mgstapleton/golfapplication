@@ -3,6 +3,8 @@
  */
 // 
 
+document.addEventListener("deviceready", onDeviceReady, false);
+
 function onDeviceReady() {
 	var db = null;
    	//var resultJSON;
@@ -12,8 +14,8 @@ function onDeviceReady() {
      	//$.getJSON("julyfixtures.json", function(result) {
 	//resultJSON = result;        
       	insertIntoDB();
-     });
-	//alert("loaded index.js");
+    // });
+	alert("loaded index.js");
     	console.log("deviceReady");
     	bounds = new google.maps.LatLngBounds();
     	
@@ -73,7 +75,7 @@ function onDeviceReady() {
 	};
 };
 
-document.addEventListener("deviceready", onDeviceReady, false);
+
 
 // Populate index page list with golf club locations
 var addClub = function () {
