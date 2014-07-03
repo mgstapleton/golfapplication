@@ -6,15 +6,7 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-	var db = null;
-   	//var resultJSON;
-	db = window.openDatabase("golfapp_db", "1.0", "golfapp", 1000000);
-	console.log("Database created");
-     	//var base_url = "https://www.hoomz.nl/staging/index.php/api/";
-     	//$.getJSON("julyfixtures.json", function(result) {
-	//resultJSON = result;        
-      	insertIntoDB();
-    // });
+
 	alert("loaded index.js");
     	console.log("deviceReady");
     	bounds = new google.maps.LatLngBounds();
@@ -73,9 +65,20 @@ function onDeviceReady() {
 		// google.maps.event.trigger(map, 'resize');
 		// });
 	};
+	createDb();
 };
 
-
+var function createDb(){
+	var db = null;
+   	//var resultJSON;
+	db = window.openDatabase("golfapp_db", "1.0", "golfapp", 1000000);
+	console.log("Database created");
+     	//var base_url = "https://www.hoomz.nl/staging/index.php/api/";
+     	//$.getJSON("julyfixtures.json", function(result) {
+	//resultJSON = result;        
+      	insertIntoDB();
+    // });
+};
 
 // Populate index page list with golf club locations
 var addClub = function () {
