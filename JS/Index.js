@@ -5,7 +5,7 @@
 
 function onDeviceReady() {
 	var db = null;
-   	var resultJSON;
+   	//var resultJSON;
 	db = window.openDatabase("golfapp_db", "1.0", "golfapp", 1000000);
 	console.log("Database created");
      	//var base_url = "https://www.hoomz.nl/staging/index.php/api/";
@@ -74,6 +74,7 @@ function onDeviceReady() {
 };
 
 document.addEventListener("deviceready", onDeviceReady, false);
+
 // Populate index page list with golf club locations
 var addClub = function () {
    console.log("addclub triggered (from body onload)");
@@ -239,10 +240,8 @@ var locator = (function () {
  
 function insertIntoDB() {
        db.transaction(function (tx){
-       	console.log("connected to db");
        tx.executeSql('DROP TABLE IF EXISTS open_comps');
        tx.executeSql('CREATE TABLE IF NOT EXISTS open_comps (club , format, fixture, holes, start_date, cost, info)');
-       	console.log("table created");
        //var recursiveFunction = function(index) {
         $.each(fixtures, function(i, comp) {
             tx.executeSql('INSERT INTO open_comps (club , format, fixture, holes, start_date, cost, info) VALUES (?, ?, ?, ?, ?, ?, ?)',
@@ -252,6 +251,7 @@ function insertIntoDB() {
      // }
      // recursiveFunction(0);
     });
+    alert("table created");
 };
 
 function errorCB(err) {
