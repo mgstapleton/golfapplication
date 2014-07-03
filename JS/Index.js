@@ -2,10 +2,15 @@
  * @author Michael Stapleton
  */
 // 
+function init(){
+	alert("loaded index.js");
+	onDeviceReady();
+	addClub();
+}
 
 function onDeviceReady() {
 
-	alert("loaded index.js");
+	
     	console.log("deviceReady");
     	bounds = new google.maps.LatLngBounds();
     	
@@ -260,4 +265,5 @@ function insertIntoDB() {
 function errorCB(err) {
     console.log("Error processing SQL: "+err.code+":"+err.message);
 };
-document.addEventListener("deviceready", onDeviceReady, false);
+
+//document.addEventListener("deviceready", onDeviceReady, false);
