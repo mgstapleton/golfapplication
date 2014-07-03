@@ -3,8 +3,6 @@
  */
 // 
 
-document.addEventListener("deviceready", onDeviceReady, false);
-
 function onDeviceReady() {
 
 	alert("loaded index.js");
@@ -262,4 +260,4 @@ function insertIntoDB() {
 function errorCB(err) {
     console.log("Error processing SQL: "+err.code+":"+err.message);
 };
-
+document.addEventListener("deviceready", onDeviceReady, false);
