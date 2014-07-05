@@ -2,16 +2,13 @@
  * @author Michael Stapleton
  */
 //
-function init () {
-	alert("loaded index.js");
-	onDeviceReady();
+
+$(document).ready(function () {
+    console.log("loaded index.js");
 	addClub();
-}
+	createDb();
 
-function onDeviceReady () {
-
-	console.log("deviceReady")
-	bounds = new google.maps.LatLngBounds()
+	bounds = new google.maps.LatLngBounds();
 
 	if (typeof jQuery === "undefined") {
 		alert("Jquery not present");
@@ -28,6 +25,7 @@ function onDeviceReady () {
 			// $(".map_button").on('click', function (event, ui) {
 			// getMap();
 			// });
+        });
 			$(document).on("pagebeforeshow", "#map_page", function () {
 				console.log("Other pagecreate for #map_page triggered");
 				getMap();
@@ -40,44 +38,19 @@ function onDeviceReady () {
 			$(document).on("pageshow", "#all_clubs_map_page", function () {
 				console.log("map page show all resize triggered");
 				showAllClubs();
-				google.maps.event.trigger(mapAll, 'resize');
-				mapAll.setOptions(myOptions);
+				//google.maps.event.trigger(mapAll, 'resize');
+				//mapAll.setOptions(myOptions);
 			});
-		});
-		// $(document).on("pagecreate","#map_page",function(event){
-		// console.log("pagecreate triggered fror #map_page1");
-		// var clubs = clubList[locator.getLocation()];
-		// var clubLocation = new google.maps.LatLng(clubs.location.lat, clubs.location.lon);
-		// $("#map_canvas").gmap({
-		// center : clubLocation,
-		// zoom : 12,
-		// mapTypeId : google.maps.MapTypeId.ROADMAP,
-		// disableDefaultUI : false,
-		// callback : function (map) {
-		// var self = this;
-		// self.addMarker({
-		// position : this.get('map').getCenter(),
-		// title : clubs.club + " golf club is here!"
-		// });
-		// }
-		// });
-		// });
-		// $( document ).on( "pageshow","#map_page", function( event, data ){
-		// console.log("resize triggered fror #map_page");
-		// google.maps.event.trigger(map, 'resize');
-		// });
-	};
-	createDb();
-}
+		//});
+	} ;
+});
+
 
 function createDb () {
-	var db = null;
+	db = null;
 	//var resultJSON;
 	db = window.openDatabase("golfapp_db", "1.0", "golfapp", 1000000);
 	console.log("Database created");
-	//var base_url = "https://www.hoomz.nl/staging/index.php/api/";
-	//$.getJSON("julyfixtures.json", function(result) {
-	//resultJSON = result;
 	insertIntoDB();
 	// });
 }
@@ -85,11 +58,8 @@ function createDb () {
 // Populate index page list with golf club locations
 function addClub () {
 	console.log("addclub triggered (from body onload)");
-	var inx,
-	node;
-	var newId,
-	newLink,
-	newPage;
+	var inx, node;
+	var newId, newLink,	newPage;
 	if (typeof jQuery === "undefined") {
 		console.log('jQuery Mobile not defined.');
 		for (inx = 0; inx < clubList.length; inx++) {
@@ -116,6 +86,19 @@ function addClub () {
 		$("#clubs").trigger('create'); // TODO: Needed?
 	}
 };
+
+var insertIntoDB = function () {
+     console.log("insert called");
+	 db.transaction(function (tx) {
+		tx.executeSql('DROP TABLE IF EXISTS open_comps');
+		tx.executeSql('CREATE TABLE IF NOT EXISTS open_comps (club , format, fixture, holes, start_date, cost, info)');
+		$.each(fixtures, function (i, comp) {
+			tx.executeSql('INSERT INTO open_comps (club , format, fixture, holes, start_date, cost, info) VALUES (?, ?, ?, ?, ?, ?, ?)', [comp.Club, comp.Format, comp.Fixture, comp.Holes, comp.Start_date, comp.Cost, comp.Info]);
+		  }
+		)
+	})
+     alert("table created");
+}
 
 // Save index of selected location
 var locationClicked = function (locat) {
@@ -154,72 +137,53 @@ var getMap = function () {
 	var marker = new google.maps.Marker({
 			position : clubLocation,
 			map : map,
-			title : "The " + club.club + " golf club is here!"
+			title : club.club + " golf club is here!"
 		});
 };
 
 var showAllClubs = function () {
 	console.log("showAllClubs triggered from document");
 	var bounds = new google.maps.LatLngBounds();
-	var middle = new google.maps.LatLng(53.0914, -7.9133);
 	myOptions = {
-		center : middle,
 		zoom : 7,
 		mapTypeId : google.maps.MapTypeId.ROADMAP
 	}
 	mapAll = new google.maps.Map(document.getElementById("map_canvas2"), myOptions);
 
-	// $.each(clubList, function(i,item) {
-	// //locationClicked(i);
-	// club = clubList[locator.getLocation()];
-	// markers = [item.club + " Golf Club" , club.location.lat, club.location.lon];
-	// clubLocation = new google.maps.LatLng(club.location.lat, club.location.lon);
-	// marker = new google.maps.Marker({position: clubLocation,map: mapAll});
-
 	// Display multiple markers on a map
-	var infoWindow = new google.maps.InfoWindow(),
-	marker,
-	i;
-
-	for (i = 1; i <= clubList.length; i++) {
+    var infoWindow = new google.maps.InfoWindow(), marker, i;
+	for (i = 0; i < clubList.length; i++) {
+        //var infoWindow = new google.maps.InfoWindow(), marker, i;
 		locator.setLocation(i);
 		var club1 = clubList[locator.getLocation()];
 		var position = new google.maps.LatLng(club1.location.lat, club1.location.lon);
-		//console.log(position);
 		bounds.extend(position);
 		marker = new google.maps.Marker({
 				position : position,
 				map : mapAll,
 				title : club1.club + " Golf Club"
 			});
+        
 		// Allow each marker to have an info window
-		google.maps.event.addListener(marker, 'click', (function (marker, i) {
-				return function () {
-					infoWindow.setContent(club1.club + " Golf Club");
-					infoWindow.open(mapAll, marker);
-				};
-			})(marker, i));
+        bindInfoWindow(marker, mapAll, infoWindow, club1.club);
 
 		// Automatically center the map fitting all markers on the screen
 		mapAll.fitBounds(bounds);
 	}
 	// Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
-	var boundsListener = google.maps.event.addListener((mapAll), 'bounds_changed', function (event) {
-			this.setZoom(9);
-			google.maps.event.removeListener(boundsListener);
-		});
+//	var boundsListener = google.maps.event.addListener((mapAll), 'bounds_changed', function (event) {
+//			this.setZoom(5);
+//			google.maps.event.removeListener(boundsListener);
+//		});
 }
 //};
 
-// var infoWindowContent = [
-// 	['<div class="info_content">' +
-// 		'<h3>Golf Club</h3>' +
-// 		'<p>Text here</p>' + '</div>'],
-// 	['<div class="info_content">' +
-// 		'<h3>Palace of Westminster</h3>' +
-// 		'<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
-// 		'</div>']
-// ];
+function bindInfoWindow(marker, map, infowindow, strDescription) {
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(strDescription + " Golf Club");
+        infowindow.open(map, marker);
+    });
+}
 
 // These functions are exposed as a module named "locator"
 var locator = (function () {
@@ -249,24 +213,4 @@ var locator = (function () {
 }
 	());
 
-var insertIntoDB = function () {
-	db.transaction(function (tx) {
-		tx.executeSql('DROP TABLE IF EXISTS open_comps');
-		tx.executeSql('CREATE TABLE IF NOT EXISTS open_comps (club , format, fixture, holes, start_date, cost, info)');
-		//var recursiveFunction = function(index) {
-		$.each(fixtures, function (i, comp) {
-			tx.executeSql('INSERT INTO open_comps (club , format, fixture, holes, start_date, cost, info) VALUES (?, ?, ?, ?, ?, ?, ?)',
-				[comp.club, comp.format, comp.fixture, comp.holes, comp.start_date, comp.cost, comp.info]);
-			//function (){index++; recursiveFunction(index)}, errorCB);
-		}
-			// }
-			// recursiveFunction(0);
-		});
-		alert("table created");
-	};
-
-	function errorCB(err) {
-		console.log("Error processing SQL: " + err.code + ":" + err.message);
-	};
-
-document.addEventListener("deviceready", onDeviceReady, false);
+//document.addEventListener("deviceready", onDeviceReady, false);
