@@ -227,7 +227,7 @@ clubList = [{
     },
   {
     club:'Blackwood',
-    location: {lat: 51.668935, lon: -3.195787},
+    location: {lat: 54.629879, lon: -5.724559},
     },
   {
     club:'Blainroe',
@@ -287,7 +287,7 @@ clubList = [{
     },
   {
     club:'Cabra Castle',
-    location: {lat: 37.471795, lon: -4.434931},
+    location: {lat: 53.913967, lon: -6.774373},
     },
   {
     club:'Cahir Park',
@@ -771,7 +771,7 @@ clubList = [{
     },
   {
     club:'Galgorm Castle',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.858590, lon: -6.3181190},
     },
   {
     club:'Galway',
@@ -807,7 +807,7 @@ clubList = [{
     },
   {
     club:'Goldcoast',
-    location: {lat: 0, lon: 0},
+    location: {lat: 52.084946, lon: -7.570396},
     },
   {
     club:'Gort',
@@ -815,11 +815,11 @@ clubList = [{
     },
   {
     club:'Gowran Park',
-    location: {lat: 0, lon: 0},
+    location: {lat: 52.619878, lon: -7.071597},
     },
   {
     club:'Gracehill',
-    location: {lat: 0, lon: 0},
+    location: {lat: 55.136953, lon: -6.384692},
     },
   {
     club:'Grange',
@@ -839,7 +839,7 @@ clubList = [{
     },
   {
     club:'Greenisland',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.703422, lon: -5.876389},
     },
   {
     club:'Greenore',
@@ -855,7 +855,7 @@ clubList = [{
     },
   {
     club:'Hazel Grove',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.270151, lon: -6.404544},
     },
   {
     club:'Headfort',
@@ -870,20 +870,16 @@ clubList = [{
     location: {lat: 53.358843, lon: -6.410858},
     },
   {
-    club:'Hibernian',
-    location: {lat: 0, lon: 0},
-    },
-  {
     club:'Highfield',
     location: {lat: 53.368351, lon: -7.017421},
     },
   {
     club:'Hilton Templepatrick',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.710194, lon: -6.093873},
     },
   {
     club:'Hollystown',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.428780, lon: -6.382007},
     },
   {
     club:'Hollywood Lakes',
@@ -891,7 +887,7 @@ clubList = [{
     },
   {
     club:'Holywood',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.631872, lon: -5.832221},
     },
   {
     club:'Howth',
@@ -947,7 +943,7 @@ clubList = [{
     },
   {
     club:'Killinbeg',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.030893, lon: -6.453519},
     },
   {
     club:'Killiney',
@@ -959,7 +955,7 @@ clubList = [{
     },
   {
     club:'Killymoon',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.030893, lon: -6.453519},
     },
   {
     club:'Kilmashogue',
@@ -979,11 +975,11 @@ clubList = [{
     },
   {
     club:'Kirkistown Castle',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.436674, lon: -5.472728},
     },
   {
     club:'Knightsbrook',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.548732, lon: -6.764445},
     },
   {
     club:'Knock',
@@ -999,7 +995,7 @@ clubList = [{
     },
   {
     club:'Lambeg',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.532276, lon: -6.027026},
     },
   {
     club:'Larne',
@@ -1079,7 +1075,7 @@ clubList = [{
     },
   {
     club:'Mahon',
-    location: {lat: 39.88733, lon: 4.259619},
+    location: {lat: 51.885382, lon: -8.420324},
     },
   {
     club:'Malahide',
@@ -1199,7 +1195,7 @@ clubList = [{
     },
   {
     club:'New Forest',
-    location: {lat: 50.876524, lon: -1.631463},
+    location: {lat: 53.381836, lon: -7.408321},
     },
   {
     club:'New Ross',
@@ -1323,7 +1319,7 @@ clubList = [{
     },
   {
     club:'Ring Of Kerry',
-    location: {lat: 0, lon: 0},
+    location: {lat: 51.874523, lon: -9.671620},
     },
   {
     club:'Rockmount',
@@ -1331,11 +1327,11 @@ clubList = [{
     },
   {
     club:'Roe Park',
-    location: {lat: 0, lon: 0},
+    location: {lat: 55.038342, lon: -6.955594},
     },
   {
     club:'Roganstown',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.486869, lon: -6.270861},
     },
   {
     club:'Rosapenna',
@@ -1367,11 +1363,11 @@ clubList = [{
     },
   {
     club:'Royal Belfast',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.660119, lon: -5.785390},
     },
   {
     club:'Royal County Down',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.217037, lon: -5.886032},
     },
   {
     club:'Royal Curragh',
@@ -1379,7 +1375,7 @@ clubList = [{
     },
   {
     club:'Royal Portrush',
-    location: {lat: 0, lon: 0},
+    location: {lat: 55.200492, lon: -6.635729},
     },
   {
     club:'Royal Tara',
@@ -1395,7 +1391,7 @@ clubList = [{
     },
   {
     club:'Scrabo',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.578332, lon: -5.719233},
     },
   {
     club:'Seafield',
@@ -1407,7 +1403,7 @@ clubList = [{
     },
   {
     club:'Shandon Park',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.583877, lon: -5.854015},
     },
   {
     club:'Shannon',
@@ -1415,15 +1411,15 @@ clubList = [{
     },
   {
     club:'Silloge Park',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.413956, lon: -6.268985},
     },
   {
     club:'Silverwood',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.475093, lon: -6.356520},
     },
   {
     club:'Skellig Bay',
-    location: {lat: 0, lon: 0},
+    location: {lat: 51.815194, lon: -10.165182},
     },
   {
     club:'Skerries',
@@ -1435,11 +1431,11 @@ clubList = [{
     },
   {
     club:'Slade Valley',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.255443, lon: -6.470375},
     },
   {
     club:'Slieve Russell',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.096871, lon: -7.556714},
     },
   {
     club:'Slievenamon',
@@ -1447,7 +1443,7 @@ clubList = [{
     },
   {
     club:'Smurfit',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.304700, lon: -6.621740},
     },
   {
     club:'South Meath',
@@ -1455,7 +1451,7 @@ clubList = [{
     },
   {
     club:'Spa',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.392045, lon: -5.909949},
     },
   {
     club:'Spanish Point',
@@ -1511,7 +1507,7 @@ clubList = [{
     },
   {
     club:'Tara Glen',
-    location: {lat: 0, lon: 0},
+    location: {lat: 52.666776, lon: -6.210690},
     },
   {
     club:'Temple',
@@ -1555,7 +1551,7 @@ clubList = [{
     },
   {
     club:'Traad Ponds',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.724063, lon: -6.527451},
     },
   {
     club:'Tralee',
@@ -1575,7 +1571,7 @@ clubList = [{
     },
   {
     club:'Tulfarris',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.122389, lon: -6.556971},
     },
   {
     club:'Tullamore',
@@ -1583,7 +1579,7 @@ clubList = [{
     },
   {
     club:'Tullybeg House',
-    location: {lat: 0, lon: 0},
+    location: {lat: 53.281737, lon: -7.613255},
     },
   {
     club:'Virginia',
@@ -1623,7 +1619,7 @@ clubList = [{
     },
   {
     club:'Whitehead',
-    location: {lat: 0, lon: 0},
+    location: {lat: 54.765455, lon: -5.699036},
     },
   {
     club:'Wicklow',
