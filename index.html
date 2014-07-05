@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Golf Club Locator</title>
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>My Page</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="CSS/jquery.mobile-1.4.3.min.css" />
+	<script src="JS/jquery-1.11.1.min.js"></script>
+	<script src="JS/jquery.mobile-1.4.3.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?&sensor=true"></script>
+</head> 
+<body> 
 
-	</head>
-	<body id="body_page" onload="init()" style="width: 100%; height: 100%;">
+	<body id="body_page" style="width: 100%; height: 100%;">
 		<!-- Home page -->
 		
-		<div id="home_page" data-role="page" style="width: 100%; height: 100%;">
+		<div id="home_page" data-role="page" data-theme ="b" style="width: 100%; height: 100%;">
 		
 			<header data-role="header">
 				<h1>Golf Open Comps</h1>
@@ -18,7 +23,7 @@
 				<div data-role="collapsible" style="width: 100%; height: 100%;">
 					<h4>Golf Courses</h4>
 					<a href="#all_clubs_map_page" data-role="button">Show All Golf Clubs</a>
-					<ul id="clubs" data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search Golf Clubs" data-inset="true" data-autodividers="true"> </ul>
+					<ul id="clubs" data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search Golf Clubs" data-inset="true" data-autodividers="false"> </ul>
 			    	</div>
 			    <div data-role="collapsible" style="width: 100%; height: 100%;">
 					<h4>Open Competitions</h4>
@@ -27,6 +32,7 @@
 					<fieldset class="ui-field-contain">
 					    <label for="province">Select Province</label>
 					    <select name="province" id="province">
+                          <option value="all">All</option>
 					      <option value="Leinster">Leinster</option>
 					      <option value="Munster">Munster</option>
 					      <option value="Connacht">Connacht</option>
@@ -36,9 +42,10 @@
 					  <fieldset class="ui-field-contain">
 					    <label for="comptype">Select Competition Type</label>
 					    <select name="comptype" id="comptype">
-					      <option value="Singles">Singles</option>
-					      <option value="Team">Team Event</option>
-					      <option value="Scratch Cup">Scratch Cup</option>
+                           <option value="All">All</option>
+					       <option value="Singles">Singles</option>
+					       <option value="Team">Team Event</option>
+					       <option value="Scratch Cup">Scratch Cup</option>
 					    </select>
 					  </fieldset>
   						<label for="switch">Flip toggle switch checkbox:</label>
@@ -49,7 +56,7 @@
 					</form>
 				</div>
 			</nav>
-			<footer data-role="footer" data-postion="fixed">
+			<footer data-role="footer" data-postion="fixed" >
 				<h2>&copy; Copyright by MS</h2>
 			</footer>
 		</div>
@@ -98,17 +105,9 @@
 				<h2>&copy; Golf Club</h2>
 			</footer>
 		</div>
-		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-		
-		<!--<script type="text/javascript" src="../Resources/Libs/jquery.ui.map.min.js"></script>-->
-		<!-- Custom scripts start -->
-		<!--<link rel="stylesheet" href="CSS/Base.css" /> -->
 		<script type="text/javascript" src="JS/Index.js"></script>
-		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?&sensor=true"></script>
+		
 		<script type="text/javascript" src="JS/Golf_Clubs.json"></script>
 		<script type="text/javascript" src="JS/julyfixtures.json"></script>
-				<!-- Custom scripts end -->
-		<script src="phonegap.js"></script>
-	</body>
+</body>
 </html>
